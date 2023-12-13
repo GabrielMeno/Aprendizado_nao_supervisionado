@@ -1,0 +1,41 @@
+=====================================
+Imagem: natal (6).png
+Resolução: 1920x1080
+Numero de cores: 537901
+Tamanho: 3.229901 mb
+
+Numero de cores: 1
+Tamanho: 0.01285 mb
+Compressao: 99.60%
+Tempo: 0.14 s
+
+Numero de cores: 3
+Tamanho: 0.200814 mb
+Compressao: 93.78%
+Tempo: 3.95 s
+
+Numero de cores: 5
+Tamanho: 0.472117 mb
+Compressao: 85.38%
+Tempo: 13.75 s
+
+Numero de cores: 9
+Tamanho: 0.67648 mb
+Compressao: 79.06%
+Tempo: 29.58 s
+
+Numero de cores: 13
+Tamanho: 0.891818 mb
+Compressao: 72.39%
+Tempo: 51.15 s
+
+Numero de cores: 19
+Tamanho: 1.071853 mb
+Compressao: 66.81%
+Tempo: 75.42 s
+
+Numero de cores: 23
+Tamanho: 1.181388 mb
+Compressao: 63.42%
+Tempo: 95.00 s
+
