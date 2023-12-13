@@ -7,16 +7,11 @@ import time
 class MODE:
     CONTINUE = 0
     RESTART = 1
-
 def kmeans(path, clusters):
     img = cv2.imread(path)
-
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
     pixel_vals = img.reshape((-1, 3))
-
     pixel_vals = np.float32(pixel_vals)
-
     retval, labels, centers = cv2.kmeans(
         pixel_vals,
         clusters,
@@ -29,30 +24,18 @@ def kmeans(path, clusters):
 
         cv2.KMEANS_RANDOM_CENTERS
     )
-
     centers = np.uint8(centers)
     segmented_data = centers[labels.flatten()]
-
     segmented_image = segmented_data.reshape(img.shape)
-
     return segmented_image
-
 def mimagem (img):
-    # Carrega dimensões da imagem
     height, width, channels = img.shape
-
-    # Plota a imagem
     plt.figure()
     plt.imshow(img)
     fig = plt.gcf()
-
-    # Configura o tamanho da imagem
     fig.set_size_inches(width / 100, height / 100)
     plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
-
-    # Mostra a imagem
     plt.show()
-
 def contagem(img):
     colors, counts = np.unique(
         img.reshape(-1, img.shape[-1]),
@@ -60,7 +43,6 @@ def contagem(img):
         axis=0,
     )
     return counts.size
-
 def simage(img, name, clusters, output_id=0):
     # Convertendo a imagem de RGB para BGR
     img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
@@ -76,10 +58,8 @@ def simage(img, name, clusters, output_id=0):
         raise Exception('Erro ao salvar imagem')
 
     return path
-
 def tamanho(path):
     return os.path.getsize(path) / 1000000
-
 def setup_logger(output_id):
     log_path = f'./outputs/{output_id}/log.txt'
 
@@ -98,7 +78,6 @@ def setup_logger(output_id):
     logger = logging.getLogger()
     logger.setLevel(logging.INFO)
     logger.addHandler(logging.StreamHandler())
-
 def print_info(path, resolution=False, timer=None, original_size=None):
     logger = logging.getLogger()
 
@@ -121,24 +100,18 @@ def print_info(path, resolution=False, timer=None, original_size=None):
         logger.info(f'Tempo: {timer:.2f} s')
 
     logger.info('')
-
 def print_initial_info(image_name):
     logger = logging.getLogger()
     logger.info('=====================================')
     logger.info(f'Imagem: {image_name}')
-
 def get_images():
     return [f for f in os.listdir('images') if f.endswith('.png')]
-
 def get_output_images(output_id):
     return [f for f in os.listdir(f'./outputs/{output_id}') if f.endswith('.png')]
-
 def get_last_output():
     return max([int(f) for f in os.listdir('outputs') if f.isdigit()] + [0])
-
 def output_exists(output_id, image, clusters):
     return os.path.exists(f'./outputs/{output_id}/{image[:-4]}_{clusters}.png')
-
 if __name__ == '__main__':
 
     # Parâmetros de execução
