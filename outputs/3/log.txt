@@ -34,3 +34,8 @@ Tamanho: 1.488458 mb
 Compressao: 56.96%
 Tempo: 93.39 s
 
+Numero de cores: 23
+Tamanho: 1.580916 mb
+Compressao: 54.29%
+Tempo: 133.08 s
+

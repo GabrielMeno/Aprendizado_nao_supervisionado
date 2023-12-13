@@ -116,7 +116,7 @@ if __name__ == '__main__':
 
     # Parâmetros de execução
     mode = MODE.RESTART
-    sizes = [1, 5, 7, 11, 15, 19, 23]
+    sizes = [1, 3, 5, 9, 13, 19, 23]
 
 
     images = get_images()
